@@ -1,0 +1,118 @@
+#targetbox html,  #targetbox body,  #targetbox div,  #targetbox span,  #targetbox applet,  #targetbox object,  #targetbox iframe,
+h1,  #targetbox h2,  #targetbox h3,  #targetbox h4,  #targetbox h5,  #targetbox h6,  #targetbox blockquote,  #targetbox pre,
+a,  #targetbox abbr,  #targetbox acronym,  #targetbox address,  #targetbox big,  #targetbox cite,
+del,  #targetbox dfn,  #targetbox img,  #targetbox ins,  #targetbox q,  #targetbox s,
+small,  #targetbox strike,  #targetbox sub,  #targetbox sup,  #targetbox tt, #targetbox u,  #targetbox center,
+dl,  #targetbox dt,  #targetbox dd,  #targetbox ol,  #targetbox ul,  #targetbox li,
+fieldset,  #targetbox form,  #targetbox label,  #targetbox legend,
+table,  #targetbox caption,  #targetbox tbody,  #targetbox tfoot,  #targetbox thead,  #targetbox tr,  #targetbox th,  #targetbox td,
+article,  #targetbox aside,  #targetbox canvas,  #targetbox details,  #targetbox embed,  #targetbox 
+figure,  #targetbox figcaption,  #targetbox footer,  #targetbox header,  #targetbox hgroup,  #targetbox 
+menu,  #targetbox nav,  #targetbox output,  #targetbox ruby,  #targetbox section,  #targetbox summary,
+time,  #targetbox mark,  #targetbox audio,  #targetbox video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+
+/* HTML5 display-role reset for older browsers */
+#targetbox article,  #targetbox aside,  #targetbox details,  #targetbox figcaption,  #targetbox figure,  #targetbox 
+footer,  #targetbox header,  #targetbox hgroup,  #targetbox menu,  #targetbox nav,  #targetbox section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+#targetbox ol,  #targetbox #targetbox ul {
+    list-style: none;
+}
+#targetbox blockquote,  #targetbox q {
+    quotes: none;
+}
+#targetbox blockquote:before,  #targetbox blockquote:after,
+q:before,  #targetbox q:after {
+    content: '';
+    content: none;
+}
+#targetbox table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+    targetbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#targetbox, #tboxOverlay, #tboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; -webkit-transform: translate3d(0,0,0);}
+#tboxWrapper {max-width:none;}
+#tboxOverlay{position:fixed; width:100%; height:100%;}
+#tboxMiddleLeft, #tboxBottomLeft{clear:left;}
+#tboxContent{position:relative;}
+#tboxLoadedContent{overflow:visible!important; -webkit-overflow-scrolling: touch;}
+#tboxTitle{margin:0;}
+#tboxLoadingOverlay, #tboxLoadingGraphic{display:none!important; position:absolute; top:0; left:0; width:100%; height:100%;}
+#tboxPrevious, #tboxNext, #tboxClose, #tboxSlideshow{cursor:pointer;}
+.tboxPhoto{margin-left:auto!important; margin-right:auto!important; float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.tboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#targetbox, #tboxContent, #tboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of targetbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#tboxOverlay{background:#000; opacity: 0.9; filter: alpha(opacity = 90);}
+#targetbox{outline:0;}
+    #tboxTopLeft{display:none;width:14px; height:14px; background:url(images/controls.png) no-repeat 0 0;}
+    #tboxTopCenter{display:none;height:14px; background:url(images/border.png) repeat-x top left;}
+    #tboxTopRight{display:none;width:14px; height:14px; background:url(images/controls.png) no-repeat -36px 0;}
+    #tboxBottomLeft{display:none;width:14px; height:43px; background:url(images/controls.png) no-repeat 0 -32px;}
+    #tboxBottomCenter{display:none;height:43px; background:url(images/border.png) repeat-x bottom left;}
+    #tboxBottomRight{display:none;width:14px; height:43px; background:url(images/controls.png) no-repeat -36px -32px;}
+    #tboxMiddleLeft{display:none;width:14px; background:url(images/controls.png) repeat-y -175px 0;}
+    #tboxMiddleRight{display:none;width:14px; background:url(images/controls.png) repeat-y -211px 0;}
+    #tboxContent{background:transparent; overflow:visible;}
+        .tboxIframe{background:#fff;}
+        #tboxError{padding:50px; border:1px solid #ccc;}
+        #tboxLoadedContent{margin-bottom:5px; text-align:center;}
+        #tboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #tboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #tboxTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
+        @media screen and (max-width: 767px) {
+            #tboxTitle{
+                display:none!important;
+            }
+        }
+        #tboxCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #tboxPrevious, #tboxNext, #tboxSlideshow {border:0; padding:0; margin:0; overflow:visible;  position:absolute; bottom:-29px; background:url(images/controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+
+        #tboxClose{background-position:-100px -25px;border:0;padding:0;margin:0;overflow:hidden;position:absolute;bottom:-29px;width:23px;height:23px;background-color:white;height:30px;width:30px;border-radius:100px;padding-top:2px;box-shadow:0px 0px 6px 1px black;bottom:-10px;right:-10px;}
+
+        #tboxClose:before {position: relative;bottom: 17px;left: 2px;content: "\00d7";color: black;font-size: 43px;}
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #tboxPrevious:active, #tboxNext:active, #tboxSlideshow:active, #tboxClose:active {outline:none;}
+        #tboxPrevious:focus, #tboxNext:focus, #tboxSlideshow:focus, #tboxClose:focus {outline:none;}
+
+        #tboxPrevious{left:23px; background-position: -51px -25px;}
+        #tboxPrevious:hover{background-position:-51px 0px;}
+        #tboxNext{background-position:-75px -25px;}
+        #tboxNext:hover{background-position:-75px 0px;}
+        #tboxClose:hover{background-position:-100px 0px;}
+
+        .tboxSlideshow_on #tboxSlideshow{background-position:-125px 0px; right:27px;}
+        .tboxSlideshow_on #tboxSlideshow:hover{background-position:-150px 0px;}
+        .tboxSlideshow_off #tboxSlideshow{background-position:-150px -25px; right:27px;}
+        .tboxSlideshow_off #tboxSlideshow:hover{background-position:-125px 0px;}
+
+
+
+

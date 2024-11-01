@@ -1,0 +1,29 @@
+{
+	"name": "jquery-targetbox",
+	"description": "jQuery lightbox and modal window plugin.",
+	"version": "1.6.4",
+	"keywords": [
+		"modal",
+		"lightbox",
+		"gallery",
+		"popup",
+		"ui",
+		"jquery-plugin"
+	],
+	"author": {
+		"name": "Jack Moore",
+		"url": "http://www.jacklmoore.com",
+		"email": "hello@jacklmoore.com"
+	},
+	"main": "jquery.targetbox.js",
+	"license": "MIT",
+	"homepage": "http://www.jacklmoore.com/targetbox",
+	"demo": "http://www.jacklmoore.com/targetbox",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/jackmoore/targetbox.git"
+	},
+	"dependencies": {
+		"jquery": ">=1.3.2"
+	}
+}
